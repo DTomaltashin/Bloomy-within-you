@@ -160,11 +160,20 @@ const Chat: React.FC = () => {
             )}
             
             <iframe
-    src="https://www.chatbase.co/chatbot-iframe/Ysy9Eo2teU_aDM9RJE9N6"
-    width="100%"
-    style="height: 100%; min-height: 700px"
-    frameborder="0"
-></iframe>
+              src="https://www.chatbase.co/chatbot-iframe/Ysy9Eo2teU_aDM9RJE9N6https://www.chatbase.co/chatbot-iframe/Ysy9Eo2teU_aDM9RJE9N6https://www.chatbase.co/chatbot-iframe/Ysy9Eo2teU_aDM9RJE9N6"
+              width="100%"
+              style={{ height: "100%", minHeight: "700px", border: "none" }}
+              frameBorder="0"
+              title="Bloomy AI Companion"
+              allow="microphone; camera"
+              loading="lazy"
+              className="w-full h-full"
+              onLoad={() => {
+                if (!isLoading) {
+                  setChatbotLoaded(true);
+                }
+              }}
+            />
           </div>
         </div>
         
@@ -205,3 +214,4 @@ const Chat: React.FC = () => {
 };
 
 export default Chat;
+
