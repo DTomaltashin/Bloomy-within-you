@@ -160,7 +160,7 @@ const Chat: React.FC = () => {
             )}
             
             <iframe
-              src="https://www.chatbase.co/chatbot-iframe/Ysy9Eo2teU_aDM9RJE9N6https://www.chatbase.co/chatbot-iframe/Ysy9Eo2teU_aDM9RJE9N6https://www.chatbase.co/chatbot-iframe/Ysy9Eo2teU_aDM9RJE9N6"
+              src="https://www.chatbase.co/chatbot-iframe/Ysy9Eo2teU_aDM9RJE9N6"
               width="100%"
               style={{ height: "100%", minHeight: "700px", border: "none" }}
               frameBorder="0"
@@ -214,4 +214,3 @@ const Chat: React.FC = () => {
 };
 
 export default Chat;
-
