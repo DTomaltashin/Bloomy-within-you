@@ -1,6 +1,6 @@
 import React, { useEffect, useState } from 'react';
 import { Link } from 'react-router-dom';
-import { Flower, MessageCircle, BarChart2, BookOpen, Sparkles, Heart, Brain, Calendar, ArrowRight, Star, Zap, Shield, Users, Clock } from 'lucide-react';
+import { Flower, MessageCircle, BarChart2, BookOpen, Sparkles, Heart, Brain, Calendar, ArrowRight, Zap, Shield, Users, Clock } from 'lucide-react';
 import { getRandomQuote } from '../utils/quotes';
 import ParticleBackground from '../components/ParticleBackground';
 import SmoothTransition from '../components/SmoothTransition';
@@ -41,7 +41,7 @@ const Home: React.FC<HomeProps> = ({ setShowNavbar }) => {
 
   const features = [
     {
-      icon: <MessageCircle className="h-8 w-8" />,
+      icon: <Zap className="h-8 w-8" />,
       title: "AI Companion Chat",
       description: "Connect with your personalized Bloomy AI, trained specifically for emotional wellness and mental health support",
       color: "from-purple-500 to-pink-500",
@@ -59,7 +59,7 @@ const Home: React.FC<HomeProps> = ({ setShowNavbar }) => {
       benefits: ["Emotion recognition", "Pattern insights", "Mindful reflection"]
     },
     {
-      icon: <Calendar className="h-8 w-8" />,
+      icon: <BarChart2 className="h-8 w-8" />,
       title: "Wellness Calendar",
       description: "Visualize your emotional journey and discover meaningful patterns to understand your mental health",
       color: "from-green-500 to-emerald-500",
@@ -99,24 +99,6 @@ const Home: React.FC<HomeProps> = ({ setShowNavbar }) => {
       label: "Lives Touched", 
       icon: <Heart className="h-6 w-6" />,
       description: "People finding peace with Bloomy"
-    }
-  ];
-
-  const testimonials = [
-    {
-      text: "Bloomy has been a game-changer for my mental health journey. The AI companion truly understands and provides thoughtful support.",
-      author: "Sarah M.",
-      role: "Mental Health Advocate"
-    },
-    {
-      text: "The emotion tracking feature helped me recognize patterns I never noticed before. It's like having a personal wellness coach.",
-      author: "David L.",
-      role: "Wellness Enthusiast"
-    },
-    {
-      text: "Finally, a mental health app that feels genuinely caring and supportive. Bloomy is always there when I need it most.",
-      author: "Emma R.",
-      role: "Student"
     }
   ];
 
@@ -300,49 +282,6 @@ const Home: React.FC<HomeProps> = ({ setShowNavbar }) => {
                     </div>
                   </div>
                 </Link>
-              </SmoothTransition>
-            ))}
-          </div>
-        </div>
-      </section>
-
-      {/* Testimonials Section */}
-      <section className="py-32 px-6 relative">
-        <div className="max-w-6xl mx-auto">
-          <SmoothTransition>
-            <div className="text-center mb-20">
-              <h2 className="text-5xl md:text-6xl font-bold text-white mb-8">
-                What People Are
-                <span className="bg-gradient-to-r from-purple-400 to-pink-400 bg-clip-text text-transparent"> Saying</span>
-              </h2>
-              <p className="text-xl text-white/80 max-w-2xl mx-auto">
-                Real stories from people who found peace and support with Bloomy
-              </p>
-            </div>
-          </SmoothTransition>
-
-          <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
-            {testimonials.map((testimonial, index) => (
-              <SmoothTransition key={index} delay={index * 200}>
-                <div className="glass-card rounded-3xl p-8 hover:scale-105 transition-all duration-500">
-                  <div className="flex items-center mb-6">
-                    {[...Array(5)].map((_, i) => (
-                      <Star key={i} className="h-5 w-5 text-yellow-400 fill-current" />
-                    ))}
-                  </div>
-                  <blockquote className="text-gray-200 leading-relaxed mb-6 italic">
-                    "{testimonial.text}"
-                  </blockquote>
-                  <div className="flex items-center gap-3">
-                    <div className="w-12 h-12 bg-gradient-to-r from-purple-500 to-pink-500 rounded-full flex items-center justify-center text-white font-bold">
-                      {testimonial.author.charAt(0)}
-                    </div>
-                    <div>
-                      <div className="font-semibold text-white">{testimonial.author}</div>
-                      <div className="text-gray-400 text-sm">{testimonial.role}</div>
-                    </div>
-                  </div>
-                </div>
               </SmoothTransition>
             ))}
           </div>
